@@ -5,6 +5,7 @@ The project aims to learn the modern DevSecOps approach, tools and methodologies
 ## Learning through OWASP pygoat Project
 The purpose is to give both developers and testers a platform for learning how to test applications and how to code securely. PyGoat is written in python and used Django web framework as a platform. It has both traditional web application vulnerabilities (i.e. XSS, SQLi) as well.
 
+[More about](https://owasp.org/www-project-pygoat/)
 
 ## Used stacks
 * GitHub Actions
