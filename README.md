@@ -8,13 +8,12 @@ The purpose is to give both developers and testers a platform for learning how t
 
 ### *Table of Contents*
 
-* [pygoat](#pygoat)
-   * [Installation](#installation)
-      * [From Sources](#from-sources)
-      * [Docker Container](#docker-container)
-      * [Installation Video](#installation-video)
-   * [Uninstallation](#uninstallation)
-   * [Solutions](#solutions-coming-soon)
+  * [Installation](#installation)
+     * [From Sources](#from-sources)
+     * [Docker Container](#docker-container)
+     * [Installation Video](#installation-video)
+  * [Uninstallation](#uninstallation)
+  * [Solutions](#solutions-coming-soon)
 
 ## Installation
 
