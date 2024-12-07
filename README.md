@@ -6,7 +6,7 @@ The project aims to learn the modern DevSecOps approach, tools and methodologies
 The purpose is to give both developers and testers a platform for learning how to test applications and how to code securely. PyGoat is written in python and used Django web framework as a platform. It has both traditional web application vulnerabilities (i.e. XSS, SQLi) as well.
 
 
-> Table of Contents
+### *Table of Contents*
 
 * [pygoat](#pygoat)
    * [Installation](#installation)
@@ -14,8 +14,7 @@ The purpose is to give both developers and testers a platform for learning how t
       * [Docker Container](#docker-container)
       * [Installation Video](#installation-video)
    * [Uninstallation](#uninstallation)
-   * [Solutions](/Solutions/solution.md)
-   * [For Developers](/docs/dev_guide.md)
+   * [Solutions](#solutions-coming-soon)
 
 ## Installation
 
