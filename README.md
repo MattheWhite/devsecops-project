@@ -102,3 +102,5 @@ $ python3 uninstaller.py
 
 ## Used stacks
 * GitHub Actions
+* Python
+
