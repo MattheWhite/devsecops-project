@@ -4,8 +4,7 @@
 # Create a CI Pipeline (GitHub Actions)
 name: CI
 
-on: [push]
-
+on: [push] # alternative way down below, this way all branches is wathced, you can specify other trigger events inside the bracket: [push, ...]
 # on: -> defines what action will trigger the pipeline
   # push: -> triggers pipeline when a push is made to any branch in the repository (if no spec. branch declared)
   #   branches: -> specify tracked branches
