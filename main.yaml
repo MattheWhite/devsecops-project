@@ -1,3 +1,11 @@
 # Define Jobs of CI/CD Pipe
 # Workflow is a configurable automated process, defined in .github/workflows directory. GitHub will detect the pipeline code of the workflow and run the defined jobs.
 
+# Create a CI Pipeline (GitHub Actions)
+name: CI
+
+on: # defines what action will trigger the pipeline
+  push:
+    branches:
+      - main
+
