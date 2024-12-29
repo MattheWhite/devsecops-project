@@ -4,8 +4,10 @@
 # Create a CI Pipeline (GitHub Actions)
 name: CI
 
-on: # defines what action will trigger the pipeline
-  push:
-    branches:
-      - main
+on: [push]
+
+# on: -> defines what action will trigger the pipeline
+  # push: -> triggers pipeline when a push is made to any branch in the repository (if no spec. branch declared)
+  #   branches: -> specify tracked branches
+  #     - main
 
