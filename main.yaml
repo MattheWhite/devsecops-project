@@ -6,9 +6,18 @@ name: CI
 
 on: [push] # alternative way down below | This way all branches are wathced, you can specify other trigger events inside the bracket: [push, ...]
 # on: -> defines what action will trigger the pipeline
-  # push: -> triggers pipeline when a push is made to any branch in the repository (if no spec. branch declared)
-  #   branches: -> specify tracked branches
-  #     - main
+#   push: -> triggers pipeline when a push is made to any branch in the repository (if no spec. branch declared)
+#     branches: -> specify tracked branches
+#     - main
 
 jobs:
   sast_scan:
+    # name the first step of this job
+    name: Run Bandit Scan
+    # define what machine this step runs on/job is executed on
+    runs-on: ubuntu-latest # ubuntu runtime this case, fresh new environment so everything has to be setted up, hosted machine by GitHub
+
+    # define the steps of the job
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2 # official GitHub Action
