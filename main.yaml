@@ -20,4 +20,9 @@ jobs:
     # define the steps of the job
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2 # official GitHub Action
+      uses: actions/checkout@v2 # official GitHub Action, all workflow under actions/ is official created by GitHub Actions
+
+    - name: Set up Python # Pylint needs a python runtime
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
