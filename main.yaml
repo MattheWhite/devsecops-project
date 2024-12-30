@@ -29,3 +29,6 @@ jobs:
 
     - name: Install Bandit
       run: pip install bandit # execute command on the machine, pip is Python package manager, already installed and available due to the prev. step
+
+    - name: Run Bandit Scan
+      run: bandit -r . # scans everything in the current folder recursively
