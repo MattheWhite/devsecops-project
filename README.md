@@ -103,4 +103,5 @@ $ python3 uninstaller.py
 ## Used stacks
 * GitHub Actions
 * Python
-
+* Bandit
+  - SAST (Static Application Security Testing) tool for `Python`, find common security issues in Python code
