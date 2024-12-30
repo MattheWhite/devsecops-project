@@ -104,4 +104,4 @@ $ python3 uninstaller.py
 * GitHub Actions
 * Python
 * Bandit
-  - SAST (Static Application Security Testing) tool for `Python`, find common security issues in Python code
+  - SAST (Static Application Security Testing) scanning tool for `Python`, find common security issues in Python code
