@@ -23,4 +23,4 @@ jobs:
       run: pip install bandit
 
     - name: Run Bandit Scan
-      run: bandit -r -ll -ii .
+      run: bandit -r -ll -ii . -f json -o bandit-report.json
