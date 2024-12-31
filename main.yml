@@ -31,4 +31,6 @@ jobs:
       run: pip install bandit # execute command on the machine, pip is Python package manager, already installed and available due to the prev. step
 
     - name: Run Bandit Scan
-      run: bandit -r . # scans everything in the current folder recursively
+      run: bandit -r -ll -ii . # scans everything in the current folder recursively
+      # configure Bandit to correctly identify vulnerabilities based on severity level and confidence level -> low confidence can result 'false positive' error
+      # -l => report level of severity or higher      -i => report issues of a given confidence level or higher  (l-low, ll-medium, ...and so on)
