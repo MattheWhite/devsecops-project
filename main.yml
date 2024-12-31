@@ -33,4 +33,4 @@ jobs:
     - name: Run Bandit Scan
       run: bandit -r -ll -ii . # scans everything in the current folder recursively
       # configure Bandit to correctly identify vulnerabilities based on severity level and confidence level -> low confidence can result 'false positive' error
-      # -l => report level of severity or higher      -i => report issues of a given confidence level or higher  (l-low, ll-medium, ...and so on)
+      # -l => report level of severity or higher      -i => report issues of a given confidence level or higher  (l-low, ll-medium, ...and so on) END RESULT WILL STAY THE SAME BUT THE LOGS NOW CORRECT TO THE DEMANDED STATES
