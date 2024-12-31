@@ -1,4 +1,5 @@
 # Workflow is a configurable automated process, defined in .github/workflows directory. GitHub will detect the pipeline code of the workflow and run the defined jobs.
+# explanation for each steps in main.yml file inside the root folder of the project
 
 name: CI
 
