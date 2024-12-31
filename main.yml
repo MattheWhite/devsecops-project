@@ -35,3 +35,13 @@ jobs:
       # configure Bandit to correctly identify vulnerabilities based on severity level and confidence level -> low confidence can result 'false positive' error
       # -l => report level of severity or higher      -i => report issues of a given confidence level or higher  (l-low, ll-medium, ...and so on) END RESULT WILL STAY THE SAME BUT THE LOGS NOW CORRECT TO THE DEMANDED STATES
       # -o OUTPUT_FILE -f FORMAT
+
+    - name: Upload Artifact # create this step to save the produced report file/aritfact, so when the job is done GitHub wont just clear the machine out where it executed, but takes this artifact and uploads it to a persistent space, so later it can be reached after the pipeline finished
+    # Allows us to share data between jobs and store data once a workflow is complete
+      # GitHub Actions steps, if any of them fails and exited with an error, all the other in the chain/order (below steps) will be skipped
+      if: always() # forces the workflow to continue always
+      uses: actions/upload-artifact@v3
+      with:
+        name: bandit-findings # provide a name for this artifact for later reference
+        path: bandit-report.json # which artifact to export
+
