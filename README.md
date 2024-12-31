@@ -106,3 +106,4 @@ $ python3 uninstaller.py
 * Bandit
   - SAST (Static Application Security Testing) scanning tool for `Python`, find common security issues in Python code
   - [*Configuration manual for Bandit*](https://bandit.readthedocs.io/en/latest/man/bandit.html)
+  - `Defect Dojo` recommended vulnerability management tool for further scanning features, it can comsumption the output report file about the findings and work with it, merge finings, remember false positives and distill duplicates, and so on.
