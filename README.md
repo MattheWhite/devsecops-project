@@ -108,3 +108,5 @@ $ python3 uninstaller.py
   - [*Configuration manual for Bandit*](https://bandit.readthedocs.io/en/latest/man/bandit.html)
   - `Defect Dojo` recommended vulnerability management tool for further scanning features, it can comsumption the output report file about the findings and work with it.
     Display all the content of the generated report file, merge findings, remember false positives and distill duplicates, and so on.
+* Docker Scout
+  - Container Image Scanning tool
