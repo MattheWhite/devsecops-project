@@ -10,7 +10,7 @@ on: [push] # alternative way down below | This way all branches are wathced, you
 #     branches: -> specify tracked branches
 #     - main
 
-jobs:
+jobs: # on GitHub UI you can see these jobs will be executed on 2 different machine paralell! This way the pipeline is faster
   sast_scan:
     # name the first step of this job
     name: Run Bandit Scan
