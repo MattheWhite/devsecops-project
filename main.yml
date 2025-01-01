@@ -58,7 +58,7 @@ jobs:
     - name: Set up Docker # searched for a workflow, copied out the uses: line, this step will install and set up docker
       uses: docker-practice/actions-setup-docker@v1
       with:
-        docker_version: '27.4'
+        docker_version: '27.4' # without specify version number it automatically uses latest
 
     - name: Build Docker Image # build and tag the image out of Dockerfile, build context is the current directory where the application code is
       run: docker build -f Dockerfile -t myapp:latest .
