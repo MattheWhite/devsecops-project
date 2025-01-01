@@ -110,3 +110,4 @@ $ python3 uninstaller.py
     Display all the content of the generated report file, merge findings, remember false positives and distill duplicates, and so on.
 * Docker Scout
   - Container Image Scanning tool
+  - We produce Docker Images as application artifacts which has to be scanned and tested before produciton. Great tool for image scanning is Docker Scout which is a **Docker native tool**.
