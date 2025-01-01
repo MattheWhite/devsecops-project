@@ -20,10 +20,10 @@ jobs:
     # define the steps of the job
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2 # official GitHub Action, all workflow under actions/ is official created by GitHub Actions
+      uses: actions/checkout@v4 # official GitHub Action, all workflow under actions/ is official created by GitHub Actions
 
     - name: Set up Python # Pylint needs a python runtime
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.8
 
@@ -40,7 +40,7 @@ jobs:
     # Allows us to share data between jobs and store data once a workflow is complete
       # GitHub Actions steps, if any of them fails and exited with an error, all the other in the chain/order (below steps) will be skipped
       if: always() # forces the workflow to continue always
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: bandit-findings # provide a name for this artifact for later reference
         path: bandit-report.json # which artifact to export
