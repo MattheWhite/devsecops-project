@@ -42,7 +42,7 @@ jobs:
         uses: actions/checkout@v4
     
       - name: Set up Docker
-        uses: docker-practice/actions-setup-docker
+        uses: docker-practice/actions-setup-docker@v1
         with:
           docker_version: '27.4'
       

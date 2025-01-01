@@ -23,7 +23,7 @@ jobs:
       uses: actions/checkout@v4 # official GitHub Action, all workflow under actions/ is official created by GitHub Actions
 
     - name: Set up Python # Pylint needs a python runtime
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v5 # VERSION NUMBERS ARE MUST BE DECLARED
       with:
         python-version: 3.8
 
