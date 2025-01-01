@@ -45,3 +45,17 @@ jobs:
         name: bandit-findings # provide a name for this artifact for later reference
         path: bandit-report.json # which artifact to export
 
+  # Implement new job for building and scanning docker image, it will be created and stored on the job execution host machine, wont be uploaded to a image registry so we dont have to pull it anywhere, and can be scanned right away
+  # common practice to divide these processes into separate steps like building the image, scanning and then push the image, but can be one job to keep simple the code
+  image_scan:
+    name: Build Image and Run Image Scan
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code # checkout the repo for the latest state of the project/code base
+      uses: actions/checkout@v4
+    
+
+
+    
+
