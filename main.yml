@@ -63,5 +63,10 @@ jobs:
     - name: Build Docker Image # build and tag the image out of Dockerfile, build context is the current directory where the application code is
       run: docker build -f Dockerfile -t myapp:latest .
 
-    
+    - name: Docker Scout Scan # download and install Docker Scout then run a quick scan and overview of the image, base image refresh and update recommendations and a more in-depth complete scan (cves) which analyzes software artifact for vulnerabilities and displays CVEs identified in a software artifact (this case our newly created Docker Image)
+      run: | # with '|' character multiple line command can be declared and executed
+        curl -fsSL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh -o install-scout.sh
+        sh install-scout.sh
+        docker scout quickview
+        docker scout cves
 
