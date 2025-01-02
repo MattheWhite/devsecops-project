@@ -35,7 +35,7 @@ jobs:
 
   image_scan:
     name: Build Image and Run Image Scan
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -43,8 +43,9 @@ jobs:
     
       - name: Set up Docker
         uses: docker-practice/actions-setup-docker@v1
-        # with:
-        #   docker_version: '26.1.3'
+        with:
+          # docker_version: '26.1.3'
+          docker_version: '27.4.1'
       
       - name: Build Docker Image
         run: docker build -f Dockerfile -t myapp:latest .
