@@ -104,7 +104,7 @@ $ python3 uninstaller.py
 #### Bugs & fixes
 There were some bugs in the project mainly with the versions and compatibilities, due to the fact that the project was prepared earlier. Solutions were to fix and rewrite the package versions and make them compatible in both cases.
   
-  1. **bug** &rarr; Fix Dockerfile RUN command, Debian *dnsutils* package version correction, prev. deb10u9 now not compatible, latest: deb10u11
+  1. **bug** &rarr; Fix Dockerfile RUN command for psycopg2  dependency installations, Debian *dnsutils* package version correction, prev. deb10u9 now not compatible, latest: deb10u11
   --- 
   2. **bug** &rarr; Fix second job's (`image_scan`) incompatibility issue, use specific runner version (not *latest*, somehow on the latest ubuntu 24.04 fails the pipeline due to version problems)
   `Specifying exact versions ensures compatibility, especially in environments where different systems need to run the same setup consistently.` **`It also prevents accidental upgrades to newer versions that might introduce breaking changes or incompatibilities. Like exactly this case, previous ubuntu-latest was specified, probably at the time it was the 22.04 version the latest.`**
