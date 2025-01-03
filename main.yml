@@ -70,3 +70,15 @@ jobs: # on GitHub UI you can see these jobs will be executed on 2 different mach
         docker scout quickview
         docker scout cves
 
+    # we have to log in to use Docker Scout, next step - use project SECRETS and VARIABLES
+    # Settings on project's main page -> Security/Secrets and variables -> Actions | Click on New repository secret
+    # when we want to access environment variables, project variables or repository variables and secrets we use the Object, like with secrets: secrets.SECRET_NAME and safer if in the command we not use the -password flag rather read it from command line with echo the value
+    - name: Docker Scout Scan with Docker Login
+      run: |
+        curl -fsSL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh -o install-scout.sh
+        sh install-scout.sh
+
+        echo ${{ secrets.REPO_PWD }} | docker login -u ${{ secrets.REPO_USER }} --password-stdin
+
+        docker scout quickview
+        docker scout cves
