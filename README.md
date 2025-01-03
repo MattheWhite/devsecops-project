@@ -99,6 +99,25 @@ $ python3 uninstaller.py
 
 [More about pygoat](https://owasp.org/www-project-pygoat/)
 
+[Forked project](https://github.com/nanuchi/devsecops-crash-course-pygoat)
+
+#### Bugs & fixes
+There were some bugs in the project mainly with the versions and compatibilities, due to the fact that the project was prepared earlier. Solutions were to fix and rewrite the package versions and make them compatible in both cases.
+  
+  1. **bug** &rarr; Fix Dockerfile RUN command, Debian *dnsutils* package version correction, prev. deb10u9 now not compatible, latest: deb10u11
+  --- 
+  2. **bug** &rarr; Fix second job's (`image_scan`) incompatibility issue, use specific runner version (not *latest*, somehow on the latest ubuntu 24.04 fails the pipeline due to version problems)
+  `Specifying exact versions ensures compatibility, especially in environments where different systems need to run the same setup consistently.` **`It also prevents accidental upgrades to newer versions that might introduce breaking changes or incompatibilities. Like exactly this case, previous ubuntu-latest was specified, probably at the time it was the 22.04 version the latest.`**
+      - *runs_on: ubuntu-22.04*
+      - *with:
+          docker_version: '26.1.4'*
+  
+  More useful links:
+  - [Choosing runner for a job](https://docs.github.com/en/actions/writing-workflows/choosing-where-your-workflow-runs/choosing-the-runner-for-a-job)
+  - [Check 22.04 specific runner compatibilities](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2204-Readme.md)
+  - [Issue with dnsutils](https://github.com/nanuchi/devsecops-crash-course-pygoat/issues/2)
+  - [Debian dnsutils package](https://packages.debian.org/buster/dnsutils) &rarr; after a quick search on Debian dnsutils you can find out which is the latest version of the package to use it in the job
+
 
 ## Used stacks
 * GitHub Actions
