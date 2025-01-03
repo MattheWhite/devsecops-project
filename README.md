@@ -143,3 +143,4 @@ There were some bugs in the project mainly with the versions and compatibilities
   - [Official GitHub Action to login to a Docker Registry](https://github.com/docker/login-action)
     - Several technology stack usage included in the docs with examples
     - Docker provides a set of official GitHub Actions for you to use in your workflows. These official actions are reusable, easy-to-use components for building, annotating, and pushing images.
+  - [Docker Scout Action detailed description](https://github.com/docker/scout-action)
