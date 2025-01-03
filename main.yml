@@ -49,7 +49,7 @@ jobs: # on GitHub UI you can see these jobs will be executed on 2 different mach
   # common practice to divide these processes into separate steps like building the image, scanning and then push the image, but can be one job to keep simple the code
   image_scan:
     name: Build Image and Run Image Scan
-    runs-on: ubuntu-latest # ubuntu-22.04 worked with doxker_version: '26.1.3'
+    runs-on: ubuntu-latest # ubuntu-22.04 worked with doxker_version: '26.1.4', here I leave version numbers only as placeholders, working file inside .github/workflows/ folder
 
     steps:
     - name: Checkout code # checkout the repo for the latest state of the project/code base
