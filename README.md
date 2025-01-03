@@ -112,7 +112,7 @@ There were some bugs in the project mainly with the versions and compatibilities
       - *with:
           docker_version: '26.1.4'*
   
-  More useful links:
+**More useful links:**
   - [Choosing runner for a job](https://docs.github.com/en/actions/writing-workflows/choosing-where-your-workflow-runs/choosing-the-runner-for-a-job)
   - [Check 22.04 specific runner compatibilities](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2204-Readme.md)
   - [Issue with dnsutils](https://github.com/nanuchi/devsecops-crash-course-pygoat/issues/2)
