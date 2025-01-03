@@ -98,6 +98,8 @@ jobs: # on GitHub UI you can see these jobs will be executed on 2 different mach
         only-severities: critical,high
         # write output to a SARIF file for further processsing or uplad into GitHub code scanning
         sarif-file: scout-report.sarif # specify file name of the saved report (.sarif is always the extension these kind of files)
+        # one more optimalization: Fail the job if security vulnerability is found
+        exit-code: true # default value is false
     
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
