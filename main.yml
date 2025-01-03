@@ -87,9 +87,21 @@ jobs: # on GitHub UI you can see these jobs will be executed on 2 different mach
       # use 'docker scout recommendations' command to display available base image updates and remediation recommendations
     
     # using an existing action made by Docker (search for Docker Scout) instead the above one -> both do the same!
+    # with this action it produces a very detailed visualization summary about the scan on the runned job's UI page
     - name: Docker Scout Scan
       uses: docker/scout-action@v1.16.1
       with:
         dockerhub-user: ${{ secrets.REPO_USER }}
         dockerhub-password: ${{ secrets.REPO_PWD }}
         command: quickview,cves
+        # configure further to report only critical and high
+        only-severities: critical,high
+        # write output to a SARIF file for further processsing or uplad into GitHub code scanning
+        sarif-file: scout-report.sarif # specify file name of the saved report (.sarif is always the extension these kind of files)
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: docker-scout-findings # upload the artifact by this name to access it later from other workflows or processes/Pipelines
+        path: scout-report.sarif
