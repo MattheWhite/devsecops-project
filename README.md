@@ -121,12 +121,25 @@ There were some bugs in the project mainly with the versions and compatibilities
 
 ## Used stacks
 * GitHub Actions
+  -   **`GitHub Actions is one of the most popular CI/CD platform for automating your build, test, and deployment pipelines.`**
 * Python
 * Bandit
   - SAST (Static Application Security Testing) scanning tool for `Python`, find common security issues in Python code
-  - [*Configuration manual for Bandit*](https://bandit.readthedocs.io/en/latest/man/bandit.html)
   - `Defect Dojo` recommended vulnerability management tool for further scanning features, it can comsumption the output report file about the findings and work with it.
-    Display all the content of the generated report file, merge findings, remember false positives and distill duplicates, and so on.
-* Docker Scout
+  
+  ***Useful materials:***
+
+  - [*Configuration manual for Bandit*](https://bandit.readthedocs.io/en/latest/man/bandit.html)
+    - Display all the content of the generated report file, merge findings, remember false positives and distill duplicates, and so on
+
+* Docker and Docker Scout
   - Container Image Scanning tool
   - We produce Docker Images as application artifacts which has to be scanned and tested before produciton. Great tool for image scanning is Docker Scout which is a **Docker native tool**.
+  
+  ***Useful materials:***
+
+  - [Docker Build GitHub Actions](https://docs.docker.com/build/ci/github-actions/)
+  - [Introduction to GitHub Actions with Docker](https://docs.docker.com/guides/gha/)
+  - [Official GitHub Action to login to a Docker Registry](https://github.com/docker/login-action)
+    - Several technology stack usage included in the docs with examples
+    - Docker provides a set of official GitHub Actions for you to use in your workflows. These official actions are reusable, easy-to-use components for building, annotating, and pushing images.
